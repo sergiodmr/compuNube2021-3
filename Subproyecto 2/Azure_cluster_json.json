@@ -1,0 +1,105 @@
+{
+    "id": "/subscriptions/28436d06-fa07-45b8-a6e7-a8369359b258/resourcegroups/sdmr-recursos-cloud/providers/Microsoft.ContainerService/managedClusters/kuber-miniproyecto",
+    "location": "eastus",
+    "name": "kuber-miniproyecto",
+    "type": "Microsoft.ContainerService/ManagedClusters",
+    "properties": {
+        "provisioningState": "Stopping",
+        "powerState": {
+            "code": "Stopped"
+        },
+        "kubernetesVersion": "1.20.9",
+        "dnsPrefix": "kuber-miniproyecto-dns",
+        "fqdn": "kuber-miniproyecto-dns-00fd0622.hcp.eastus.azmk8s.io",
+        "agentPoolProfiles": [
+            {
+                "name": "agentpool",
+                "count": 0,
+                "vmSize": "Standard_DS2_v2",
+                "osDiskSizeGB": 128,
+                "osDiskType": "Managed",
+                "maxPods": 110,
+                "type": "VirtualMachineScaleSets",
+                "availabilityZones": [
+                    "1",
+                    "2",
+                    "3"
+                ],
+                "enableAutoScaling": false,
+                "provisioningState": "Stopping",
+                "powerState": {
+                    "code": "Stopped"
+                },
+                "orchestratorVersion": "1.20.9",
+                "mode": "System",
+                "osType": "Linux",
+                "nodeImageVersion": "AKSUbuntu-1804gen2containerd-2021.10.30"
+            }
+        ],
+        "servicePrincipalProfile": {
+            "clientId": "msi"
+        },
+        "addonProfiles": {
+            "azurepolicy": {
+                "enabled": false,
+                "config": null
+            },
+            "httpApplicationRouting": {
+                "enabled": false,
+                "config": null
+            },
+            "omsAgent": {
+                "enabled": true,
+                "config": {
+                    "logAnalyticsWorkspaceResourceID": "/subscriptions/28436d06-fa07-45b8-a6e7-a8369359b258/resourceGroups/DefaultResourceGroup-EUS/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-28436d06-fa07-45b8-a6e7-a8369359b258-EUS"
+                },
+                "identity": {
+                    "resourceId": "/subscriptions/28436d06-fa07-45b8-a6e7-a8369359b258/resourcegroups/MC_sdmr-recursos-cloud_kuber-miniproyecto_eastus/providers/Microsoft.ManagedIdentity/userAssignedIdentities/omsagent-kuber-miniproyecto",
+                    "clientId": "080ae368-cc29-427a-899b-c8acae3da2cc",
+                    "objectId": "a19f2d2d-11d4-40fe-ad0e-767a33d6f781"
+                }
+            }
+        },
+        "nodeResourceGroup": "MC_sdmr-recursos-cloud_kuber-miniproyecto_eastus",
+        "enableRBAC": true,
+        "networkProfile": {
+            "networkPlugin": "kubenet",
+            "loadBalancerSku": "Standard",
+            "loadBalancerProfile": {
+                "managedOutboundIPs": {
+                    "count": 1
+                },
+                "effectiveOutboundIPs": [
+                    {
+                        "id": "/subscriptions/28436d06-fa07-45b8-a6e7-a8369359b258/resourceGroups/MC_sdmr-recursos-cloud_kuber-miniproyecto_eastus/providers/Microsoft.Network/publicIPAddresses/13a1e205-2397-4def-8c80-3fd8caa627a6"
+                    }
+                ]
+            },
+            "podCidr": "10.244.0.0/16",
+            "serviceCidr": "10.0.0.0/16",
+            "dnsServiceIP": "10.0.0.10",
+            "dockerBridgeCidr": "172.17.0.1/16",
+            "outboundType": "loadBalancer"
+        },
+        "maxAgentPools": 100,
+        "apiServerAccessProfile": {
+            "enablePrivateCluster": false
+        },
+        "identityProfile": {
+            "kubeletidentity": {
+                "resourceId": "/subscriptions/28436d06-fa07-45b8-a6e7-a8369359b258/resourcegroups/MC_sdmr-recursos-cloud_kuber-miniproyecto_eastus/providers/Microsoft.ManagedIdentity/userAssignedIdentities/kuber-miniproyecto-agentpool",
+                "clientId": "ee4f1911-3e96-48de-a6dd-392ee86d3510",
+                "objectId": "c52ceca0-6812-4e46-9cbd-aa9c692c4673"
+            }
+        }
+    },
+    "identity": {
+        "type": "SystemAssigned",
+        "principalId": "1bfbba05-b642-4f2c-97c3-a6ca61999a35",
+        "tenantId": "693cbea0-4ef9-4254-8977-76e05cb5f556"
+    },
+    "sku": {
+        "name": "Basic",
+        "tier": "Free"
+    }
+}
